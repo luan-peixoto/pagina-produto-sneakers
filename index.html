@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/all.css" rel="stylesheet">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+
+</head>
+
+<body>
+
+  <!--navbar principal, vai aparecer em ambos dispositivos-->
+  <nav class="navbar navbar-light navbar-expand-sm sticky-top sticky-shadow pb-4 pb-sm-0 pt-3 pt-sm-2"
+    style="background-color: white; ">
+
+    <div class="container">
+
+
+      <!--seção logo e botão no mobile-->
+      <div class="d-block d-sm-none">
+        <!--botão de collapse(hamburguer, mobile)-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="Botão de Navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--logo-->
+        <a class="ps-2 navbar-brand" href="/index.html">
+          <img src="images/logo.svg" alt="logo.svg">
+        </a>
+      </div>
+
+
+      <!--logo >sm -->
+      <a class="navbar-brand d-none d-sm-block pb-4" href="/index.html">
+        <img src="images/logo.svg" alt="logo.svg">
+      </a>
+
+      <!--menus que vão ser colapsados dentro do botão de collapse-->
+      <div class="navbar-collapse-shadow collapse navbar-collapse" id="menu" style="background-color: white;">
+
+
+
+        <div class="d-flex d-inline-block d-sm-none mt-4 mx-auto">
+          <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#menu"
+            aria-label="Close"></button>
+        </div>
+
+
+
+        <ul class="navbar-nav navbar-expand-sm pt-2">
+
+
+          <li class="nav-item pt-0 pt-sm-2" style="z-index: 1;">
+            <a class="nav-link navbar-item-hover pb-0 pb-sm-4 mb-1 mb-sm-2" aria-current="page" href="#">
+              <h6 class="d-inline font-sm">Collections</h6>
+            </a>
+            <div class="d-none d-sm-block orange-horizontal-line"> </div>
+          </li>
+          <hr class="mt-1 mb-1" />
+          <li class="nav-item pt-0 pt-sm-2" style="z-index: 1;">
+            <a class="nav-link navbar-item-hover pb-0 pb-sm-4 mb-1 mb-sm-2" href="#">
+              <h6 class="d-inline font-sm">Men</h6>
+            </a>
+            <div class="d-none d-sm-block orange-horizontal-line"> </div>
+          </li>
+          <hr class="mt-1 mb-1" />
+          <li class="nav-item pt-0 pt-sm-2" style="z-index: 1;">
+            <a class="nav-link navbar-item-hover pb-0 pb-sm-4 mb-1 mb-sm-2" href="#">
+              <h6 class="d-inline font-sm">Women</h6>
+            </a>
+            <div class="d-none d-sm-block orange-horizontal-line"> </div>
+          </li>
+          <hr class="mt-1 mb-1" />
+          <li class="nav-item pt-0 pt-sm-2" style="z-index: 1;">
+            <a class="nav-link navbar-item-hover pb-0 pb-sm-4 mb-1 mb-sm-2" href="#">
+              <h6 class="d-inline font-sm">About</h6>
+            </a>
+            <div class="d-none d-sm-block orange-horizontal-line"></div>
+          </li>
+          <hr class="mt-1 mb-1" />
+
+
+        </ul>
+      </div>
+
+      <!-- seção carrinho e foto-->
+      <div class="d-block pb-1 pb-sm-3">
+        <!--carrinho-->
+        <a class="btn pe-1 p-0 p-sm-2" href="/index.html">
+          <img class="cart" src="images/icon-cart.svg" alt="avatar.png">
+        </a>
+
+        <!--avatar-->
+        <a class="btn pt-1 p-0 p-sm-2" href="/index.html">
+          <img class="profile-icon" src="images/image-avatar.png" alt="avatar.png">
+        </a>
+      </div>
+
+    </div>
+
+    <div class="d-none d-sm-block bottom-border"></div>
+  </nav>
+
+  <!--display de fotos e preço-->
+  <div class="container">
+
+    <div class="row">
+
+      <!--coluna da imagem grande e thumbnails sm pra cima-->
+      <div class="d-none d-sm-block col-12 col-md-6 p-sm-5 p-md-3 p-xl-5">
+
+        <!--imagem principal que vai abrir o lightbox-->
+        <div class="row ps-lg-5 pe-lg-5 pb-4 pb-md-3 pb-lg-4">
+
+          <div class="col-12">
+
+            <!--a classe img-principal é só um jeito de localizar as imagens-->
+            <div id="imagem-1" class="img-principal d-block">
+              <a type="button" onclick="abrirModal();currentSlide(1)">
+                <img draggable="false" class="thumb-hover-size border-radius-15 w-100 hover-shadow"
+                  src="images/image-product-1.jpg" alt="tenis solto">
+              </a>
+            </div>
+
+            <div id="imagem-2" class="img-principal d-none">
+              <a type="button" onclick="abrirModal();currentSlide(2)">
+                <img draggable="false" class="thumb-hover-size border-radius-15 w-100 hover-shadow"
+                  src="images/image-product-2.jpg" alt="tenis com graveto">
+              </a>
+            </div>
+
+            <div id="imagem-3" class="img-principal d-none">
+              <a type="button" onclick="abrirModal();currentSlide(3)">
+                <img draggable="false" class="thumb-hover-size border-radius-15 w-100 hover-shadow"
+                  src="images/image-product-3.jpg" alt="tenis folha torta">
+              </a>
+            </div>
+
+            <div id="imagem-4" class="img-principal d-none">
+              <a type="button" onclick="abrirModal();currentSlide(4)">
+                <img draggable="false" class="thumb-hover-size border-radius-15 w-100 hover-shadow"
+                  src="images/image-product-4.jpg" alt="tenis malabarista">
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--thumbnails que mudam a imagem principal-->
+        <div class="row ps-lg-5 pe-lg-5">
+
+          <!--a classe thumb-principal é só uma forma de localizar essas thumbs-->
+          <div class="col-3">
+            <a type="button" onclick="mostrarImagem('1')">
+              <img draggable="false"
+                class="thumb-principal border-radius-10 w-100 thumb-active-border thumb-hover-opacity hover-shadow"
+                src="images/image-product-1-thumbnail.jpg" alt="tenis solto">
+            </a>
+          </div>
+
+          <div class="col-3">
+            <a type="button" onclick="mostrarImagem('2')">
+              <img draggable="false"
+                class="thumb-principal border-radius-10 w-100 thumb-demo-border thumb-hover-opacity hover-shadow"
+                src="images/image-product-2-thumbnail.jpg" alt="tenis com graveto">
+            </a>
+          </div>
+
+          <div class="col-3">
+            <a type="button" onclick="mostrarImagem('3')">
+              <img draggable="false"
+                class="thumb-principal border-radius-10 w-100 thumb-demo-border thumb-hover-opacity hover-shadow"
+                src="images/image-product-3-thumbnail.jpg" alt="tenis folha solta">
+            </a>
+          </div>
+
+          <div class="col-3">
+            <a type="button" onclick="mostrarImagem('4')">
+              <img draggable="false"
+                class="thumb-principal border-radius-10 w-100 thumb-demo-border thumb-hover-opacity hover-shadow"
+                src="images/image-product-4-thumbnail.jpg" alt="tenis malabarista">
+            </a>
+          </div>
+
+        </div>
+      </div>
+      
+      <!--coluna das imagens mobile-->
+      <div class="d-block d-sm-none col-12 p-3">
+      </div>
+
+      <!--coluna dos preços e botões de compra-->
+      <div class="col-12 col-md-6 p-3 p-sm-5 p-md-3 p-xl-5">
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- o modal/lightbox -->
+  <div id="modal-lightbox" class="modal-lightbox">
+    <a type="button" onclick="fecharModal()">
+      <span class="close-button">&times;</span>
+    </a>
+    <div class="container">
+
+      <div class="row pb-4 pb-md-2 pb-lg-0 align-items-center">
+        <!-- a coluna que vai conter a imagem precisa ter position: relative para que a posição
+        do número do slide funcione -->
+
+        <!--
+          <a class="prev" onclick="proximoSlide(-1)"><div class="float-end" style="border-radius: 50%; width: 40px; height: 40px; background-color: aliceblue; text-align: center;">&#10094;</div></a>
+        
+        -->
+
+        <!--botão de anterior-->
+        <div class="col-1 offset-md-1 offset-lg-2 col-md-1  col-lg-1">
+          <a class="float-end pe-1 prev" type="button" onclick="proximoSlide(-1)">&#10094;</a>
+        </div>
+
+        <!--imagem principal do slide-->
+        <div class="col-10 col-md-8 col-lg-6" style="position: relative;">
+
+          <div class="modal-image">
+            <img class="w-100 border-radius-15" src="images/image-product-1.jpg" alt="tenis solto">
+          </div>
+
+          <div class="modal-image">
+            <img class="w-100 border-radius-15" src="images/image-product-2.jpg" alt="tenis com graveto">
+          </div>
+
+          <div class="modal-image">
+            <img class="w-100 border-radius-15" src="images/image-product-3.jpg" alt="tenis folha torta">
+          </div>
+
+          <div class="modal-image">
+            <img class="w-100 border-radius-15" src="images/image-product-4.jpg" alt="tenis malabarista">
+          </div>
+
+          <!--número atual do slide e texto-->
+          <div id="slide-number-text" class="current-slide-number-text"></div>
+
+        </div>
+
+
+        <!--botão de próximo-->
+        <div class="col-1 col-md-1 col-lg-1">
+          <a class="next" type="button" onclick="proximoSlide(1)"> &#10095;</a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Thumbnail image controls -->
+      <div class="row ps-5 pe-5 ps-md-5 pe-md-5 ps-lg-0 pe-lg-0">
+        <!--dot é uma classe só para identificar os botões de thumb dentro do modal-->
+        <div class="col-3 offset-md-2 col-md-2 p-md-3 offset-lg-4 col-lg-1">
+            <img class="dot w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10" draggable="false"
+              src="images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="tenis solto">
+        </div>
+
+        <div class="col-3 col-md-2 p-md-3 col-lg-1">
+          
+            <img class="dot w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10" draggable="false"
+              src="images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="tenis com graveto">
+          
+        </div>
+
+        <div class="col-3 col-md-2 p-md-3 col-lg-1">
+          
+            <img class="dot w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10" draggable="false"
+              src="images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="tenis folha torta">
+          
+        </div>
+
+        <div class="col-3 col-md-2 p-md-3 col-lg-1">
+          
+            <img class="dot w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10" draggable="false"
+              src="images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="tenis malabarista">
+          
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Luan Peixoto Jardim</a>.
+  </div>
+
+
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
