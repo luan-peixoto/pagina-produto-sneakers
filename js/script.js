@@ -1,3 +1,10 @@
+// FUNÇÃO PARA FECHAR AVISO
+
+function fecharAviso() {
+    document.getElementsByClassName("aviso")[0].style.display = "none";
+}
+
+
 // FUNÇÃO PARA REMOVER NAVBAR MOBILE SE CLICAR FORA DELA:
 
 $(document).click(function (event) {
@@ -5,8 +12,6 @@ $(document).click(function (event) {
         $('.navbar-collapse').collapse('hide');
     }
 });
-
-
 
 function mostrarImagem(id) {
     var i;
@@ -97,6 +102,8 @@ var slideIndex = 1;
 // define um valor aleatório pro índice do slide, ao clicar em qualquer uma imagem do lightbox,
 // esse valor vai ser mudado pelo índice da imagem.
 
+
+// FUNÇÃO PARA FECHAR O LIGHT-BOX CLICANDO APENAS NA PARTE PRETA (LUGARES QUE N A CLASSE fechar-modal)
 
 $('.modal-lightbox').on('click', function(e) {
     if(!$(e.target).hasClass('fechar-modal')){ // check if target is not the image displayed
