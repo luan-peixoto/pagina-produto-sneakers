@@ -245,8 +245,7 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   transition: 0.3s;
 }
 
-.close-button:hover,
-.close-button:focus {
+.close-button:hover {
   color: hsl(26, 100%, 50%);
   text-decoration: none;
   cursor: pointer;
@@ -318,12 +317,17 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   }
 }
 
-/* muda a cor da seta ao passar o mouse ou clicar */
+/* muda a cor da seta ao passar o mouse */
 .prev:hover,
-.next:hover,
-.prev:focus,
-.next:focus {
+.next:hover {
   color: hsl(26, 100%, 50%);
+}
+
+/* muda a cor ao clicar  */
+.prev:active,
+.next:active {
+  filter: brightness(0.8);
+  box-shadow: none;
 }
 
 /* muda a cor da thumb do modal ao passar o mouse */
@@ -368,11 +372,18 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   /* Standard */
 }
 
-.btn-add-cart:hover,
-.btn-add-cart:focus {
+.btn-add-cart:hover {
   background-color: #cc6415;
   color: hsl(223, 64%, 98%);
 }
+
+.btn-add-cart:active {
+  background-color: #ac5513;
+  color: hsl(223, 64%, 98%);
+  box-shadow: none;
+}
+
+
 
 /* display da qtd */
 
@@ -411,11 +422,15 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   /* Standard */
 }
 
-.btn-qtd:hover,
-.btn-qtd:focus {
+.btn-qtd:hover {
   filter: brightness(0.8);
   color: hsl(26, 100%, 50%);
 }
+
+.btn-qtd:active {
+  filter: brightness(0.5);
+}
+
 
 .radius-left {
   border-radius: 5px 0 0 5px;
@@ -486,10 +501,15 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
 
 
 
-/* muda a cor da seta ao passar o mouse ou clicar */
+/* muda a cor da seta ao passar o mouse  */
 .prev-mobile:hover,
-.next-mobile:hover,
-.prev-mobile:focus,
-.next-mobile:focus {
+.next-mobile:hover {
   color: hsl(26, 100%, 50%);
+}
+
+/* muda a cor ao clicar  */
+.prev-mobile:active,
+.next-mobile:active {
+  filter: brightness(0.8);
+  box-shadow: none;
 }
