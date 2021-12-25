@@ -112,7 +112,7 @@
     <div class="d-none d-sm-block bottom-border"></div>
   </nav>
 
-  <!--display de fotos e preço-->
+  <!--display de fotos e preço -->
   <div class="container">
 
     <div class="row">
@@ -126,28 +126,28 @@
           <div class="col-12">
 
             <!--a classe img-principal é só um jeito de localizar as imagens-->
-            <div id="imagem-1" class="img-principal d-block">
+            <div class="img-principal d-block">
               <a type="button" onclick="abrirModal();currentSlide(1)">
                 <img draggable="false" class="thumb-hover-size border-radius-15 w-100 hover-shadow"
                   src="images/image-product-1.jpg" alt="tenis solto">
               </a>
             </div>
 
-            <div id="imagem-2" class="img-principal d-none">
+            <div class="img-principal d-none">
               <a type="button" onclick="abrirModal();currentSlide(2)">
                 <img draggable="false" class="thumb-hover-size border-radius-15 w-100 hover-shadow"
                   src="images/image-product-2.jpg" alt="tenis com graveto">
               </a>
             </div>
 
-            <div id="imagem-3" class="img-principal d-none">
+            <div class="img-principal d-none">
               <a type="button" onclick="abrirModal();currentSlide(3)">
                 <img draggable="false" class="thumb-hover-size border-radius-15 w-100 hover-shadow"
                   src="images/image-product-3.jpg" alt="tenis folha torta">
               </a>
             </div>
 
-            <div id="imagem-4" class="img-principal d-none">
+            <div class="img-principal d-none">
               <a type="button" onclick="abrirModal();currentSlide(4)">
                 <img draggable="false" class="thumb-hover-size border-radius-15 w-100 hover-shadow"
                   src="images/image-product-4.jpg" alt="tenis malabarista">
@@ -196,23 +196,106 @@
 
         </div>
       </div>
-      
+
       <!--coluna das imagens mobile-->
-      <div class="d-block d-sm-none col-12 p-3">
+      <div class="d-block d-sm-none col-12 p-0 m-0">
+        <div class="col-12 p-0" style="position: relative;">
+
+          <!--a classe img-principal-mobiile é só um jeito de localizar as imagens-->
+          <div class="img-principal-mobile d-block">
+              <img draggable="false" class="w-100"
+                src="images/image-product-1.jpg" alt="tenis solto">
+          </div>
+
+          <div class="img-principal-mobile d-none">
+              <img draggable="false" class="w-100"
+                src="images/image-product-2.jpg" alt="tenis com graveto">
+          </div>
+
+          <div class="img-principal-mobile d-none">
+              <img draggable="false" class="w-100"
+                src="images/image-product-3.jpg" alt="tenis folha torta">
+          </div>
+
+          <div class="img-principal-mobile d-none">
+              <img draggable="false" class="w-100"
+                src="images/image-product-4.jpg" alt="tenis malabarista">
+          </div>
+
+          <a class="fechar-modal prev-mobile ms-2" type="button" onclick="proximoSlideMobile(-1)"> <p>&#10094;</p></a>
+          <a class="fechar-modal next-mobile me-2" type="button" onclick="proximoSlideMobile(1)"> <p>&#10095;</p></a>
+
+        </div>
+
       </div>
 
       <!--coluna dos preços e botões de compra-->
-      <div class="col-12 col-md-6 p-3 p-sm-5 p-md-3 p-xl-5">
-      </div>
+      <div class="col-12 col-md-6 p-3 pb-0 p-sm-5 p-md-3 p-xl-5">
+        <div class="p-2 pt-lg-4 p-xl-5">
+          <p><b style="font-size: 0.8em;">SNEAKER COMPANY</b></p>
+          <h2 class="pb-3 pb-md-0 pb-lg-3"><b>Fall Limited Edition Sneakers</b></h2>
 
+          <p class="pb-3 pb-md-0 pb-lg-3">These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+          <div>
+            <h3 class="d-inline pe-4"><b>$125.00</b></h3>
+            <p class="d-inline ps-2 pe-2 pt-1 pb-1"
+              style="font-size: 0.8em;color: hsl(26, 100%, 55%); background-color: hsl(25, 100%, 94%);"><b>50%</b></p>
+            
+              <!--preço antigo em md pra baixo fica do lado-->
+              <p class="d-inline pb-1 ps-2 d-md-none" style="font-size: 0.8em; color: hsl(220, 14%, 75%);"><b>$250.00</b></p>
+          </div>
+
+          <!--preço antigo em md pra cima fica em baixo-->
+          <p class="pb-1 d-none d-md-block" style="font-size: 0.8em; color: hsl(220, 14%, 75%);"><b>$250.00</b></p>
+        </div>
+
+        <div class="col-12">
+          <div class="row">
+
+            <!--qtd botões-->
+            <div class="pb-4 pb-md-0 col-12 col-md-6 d-flex justify-content-center">
+
+              <a class="btn-qtd w-25 d-inline pt-2 pb-2 radius-left" type="button">
+                <p class="p-0 d-inline" style="font-size: 0.8em;"><b>-</b></p>
+              </a>
+
+              <span class="d-inline display-qtd w-50 d-inline pt-2 pb-2">
+                <p class="p-0 d-inline" style="font-size: 0.8em;"><b>0</b></p>
+              </span>
+
+              <a class="btn-qtd w-25 d-inline pt-2 pb-2 radius-right" type="button">
+                <p class="p-0 d-inline" style="font-size: 0.8em;"><b>+</b></p>
+              </a>
+
+
+            </div>
+
+            <!-- add cart botão-->
+            <div class="pb-3 pb-md-0 col-12 col-md-6">
+              <a class="btn-add-cart w-100 btn d-inline pt-2 pb-2" type="button">
+                <img class="pb-1 me-1" style="filter:brightness(100)" src="images/icon-cart.svg" alt="avatar.png">
+                <p class="d-inline" style="font-size: 0.8em;">Add to Cart</p>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
 
   <!-- o modal/lightbox -->
   <div id="modal-lightbox" class="modal-lightbox">
+
+    <!--a classe fechar modal faz com que caso clique em algo que tenha ela o modal n seja
+    fechado, mas se clicar em algum espaço vazio (preto), ele fecha-->
+
+    <!--botão de fechar o modal-->
     <a type="button" onclick="fecharModal()">
-      <span class="close-button">&times;</span>
+      <span class="fechar-modal close-button">&times;</span>
     </a>
     <div class="container">
 
@@ -226,27 +309,27 @@
         -->
 
         <!--botão de anterior-->
-        <div class="col-1 offset-md-1 offset-lg-2 col-md-1  col-lg-1">
-          <a class="float-end pe-1 prev" type="button" onclick="proximoSlide(-1)">&#10094;</a>
+        <div class="col-1 offset-md-1 offset-lg-2 col-md-1 col-lg-1">
+          <a class="fechar-modal float-end pe-1 prev" type="button" onclick="proximoSlide(-1)">&#10094;</a>
         </div>
 
         <!--imagem principal do slide-->
         <div class="col-10 col-md-8 col-lg-6" style="position: relative;">
 
-          <div class="modal-image">
-            <img class="w-100 border-radius-15" src="images/image-product-1.jpg" alt="tenis solto">
+          <div class=" modal-image">
+            <img class="fechar-modal w-100 border-radius-15" src="images/image-product-1.jpg" alt="tenis solto">
           </div>
 
-          <div class="modal-image">
-            <img class="w-100 border-radius-15" src="images/image-product-2.jpg" alt="tenis com graveto">
+          <div class=" modal-image">
+            <img class="fechar-modal w-100 border-radius-15" src="images/image-product-2.jpg" alt="tenis com graveto">
           </div>
 
-          <div class="modal-image">
-            <img class="w-100 border-radius-15" src="images/image-product-3.jpg" alt="tenis folha torta">
+          <div class=" modal-image">
+            <img class="fechar-modal w-100 border-radius-15" src="images/image-product-3.jpg" alt="tenis folha torta">
           </div>
 
-          <div class="modal-image">
-            <img class="w-100 border-radius-15" src="images/image-product-4.jpg" alt="tenis malabarista">
+          <div class=" modal-image">
+            <img class="fechar-modal w-100 border-radius-15" src="images/image-product-4.jpg" alt="tenis malabarista">
           </div>
 
           <!--número atual do slide e texto-->
@@ -257,7 +340,7 @@
 
         <!--botão de próximo-->
         <div class="col-1 col-md-1 col-lg-1">
-          <a class="next" type="button" onclick="proximoSlide(1)"> &#10095;</a>
+          <a class="fechar-modal next" type="button" onclick="proximoSlide(1)"> &#10095;</a>
 
         </div>
 
@@ -269,29 +352,32 @@
       <div class="row ps-5 pe-5 ps-md-5 pe-md-5 ps-lg-0 pe-lg-0">
         <!--dot é uma classe só para identificar os botões de thumb dentro do modal-->
         <div class="col-3 offset-md-2 col-md-2 p-md-3 offset-lg-4 col-lg-1">
-            <img class="dot w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10" draggable="false"
-              src="images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="tenis solto">
+          <img class="dot fechar-modal w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10"
+            draggable="false" src="images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="tenis solto">
         </div>
 
         <div class="col-3 col-md-2 p-md-3 col-lg-1">
-          
-            <img class="dot w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10" draggable="false"
-              src="images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="tenis com graveto">
-          
+
+          <img class="dot fechar-modal w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10"
+            draggable="false" src="images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)"
+            alt="tenis com graveto">
+
         </div>
 
         <div class="col-3 col-md-2 p-md-3 col-lg-1">
-          
-            <img class="dot w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10" draggable="false"
-              src="images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="tenis folha torta">
-          
+
+          <img class="dot fechar-modal w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10"
+            draggable="false" src="images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)"
+            alt="tenis folha torta">
+
         </div>
 
         <div class="col-3 col-md-2 p-md-3 col-lg-1">
-          
-            <img class="dot w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10" draggable="false"
-              src="images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="tenis malabarista">
-          
+
+          <img class="dot fechar-modal w-100 thumb-demo-border thumb-hover-opacity-modal border-radius-10"
+            draggable="false" src="images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)"
+            alt="tenis malabarista">
+
         </div>
       </div>
     </div>
@@ -302,19 +388,8 @@
 
 
 
-  Sneaker Company
 
-  Fall Limited Edition Sneakers
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

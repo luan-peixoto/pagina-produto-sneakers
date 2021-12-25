@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+
+/* fonte da pagina */
+html, body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+
 /* fazer a navbar vir da esquerda em dispositivos xsmall (mobile) */
 
 @media (max-width: 576px) {
@@ -239,12 +248,11 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
 /* botão proximo e anterior do modal */
 .prev,
 .next {
-  cursor: pointer;
   transition: 0.6s ease;
-  height: 38px;
-  line-height: 38px;
-  width: 38px;
-  font-size: 20px;
+  height: 43px;
+  line-height: 43px;
+  width: 43px;
+  font-size: 24px;
   border-radius: 50%;
   background-color: #e0e0e0;
   color: rgb(97, 97, 97);
@@ -262,11 +270,36 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   /* Standard */
 }
 
+@media (min-width: 1400px) {
 
+  .prev,
+  .next {
+    transition: 0.6s ease;
+    height: 58px;
+    line-height: 58px;
+    width: 58px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: rgb(97, 97, 97);
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+  }
+}
 
 /* muda a cor da seta ao passar o mouse ou clicar */
 .prev:hover,
-.next:hover, 
+.next:hover,
 .prev:focus,
 .next:focus {
   color: hsl(26, 100%, 50%);
@@ -283,6 +316,7 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   filter: brightness(0.8);
 }
 
+/* sombra no hover das imagens */
 
 .hover-shadow {
   transition: 0.3s;
@@ -290,4 +324,151 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* botão add to cart */
+
+.btn-add-cart {
+  transition: 0.3s ease;
+  border-radius: 8px;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(223, 64%, 98%);
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 hsl(26, 100%, 55%);
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+.btn-add-cart:hover,
+.btn-add-cart:focus {
+  background-color: #cc6415;
+  color: hsl(223, 64%, 98%);
+}
+
+/* display da qtd */
+
+.display-qtd {
+  transition: 0.3s ease;
+  background-color: hsl(230, 18%, 93%);
+  color: hsl(26, 100%, 50%);
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+/* botão de qtd */
+
+.btn-qtd {
+  transition: 0.3s ease;
+  background-color: hsl(230, 18%, 93%);
+  color: hsl(26, 100%, 50%);
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+.btn-qtd:hover,
+.btn-qtd:focus {
+  filter: brightness(0.8);
+  color: hsl(26, 100%, 50%);
+}
+
+.radius-left {
+  border-radius: 5px 0 0 5px;
+}
+
+.radius-right {
+  border-radius: 0 5px 5px 0;
+}
+
+
+/* botão proximo e anterior da galeria mobile */
+
+/* botão proximo e anterior do modal */
+.prev-mobile,
+.next-mobile {
+  padding-top: 6px;
+  position: absolute;
+  top: calc(50% - 23px);
+  width: 45px;
+  height: 45px;
+  transition: 0.6s ease;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: rgb(97, 97, 97);
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+@media (max-width: 400px) {
+
+  .prev-mobile,
+  .next-mobile {
+    padding-top: 4px;
+    position: absolute;
+    top: calc(50% - 18px);
+    width: 35px;
+    height: 35px;
+    transition: 0.6s ease;
+    font-size: 16px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: rgb(97, 97, 97);
+    text-align: center;
+    text-decoration: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+  }
+}
+
+.next-mobile {
+  right: 0;
+}
+
+
+
+/* muda a cor da seta ao passar o mouse ou clicar */
+.prev-mobile:hover,
+.next-mobile:hover,
+.prev-mobile:focus,
+.next-mobile:focus {
+  color: hsl(26, 100%, 50%);
 }

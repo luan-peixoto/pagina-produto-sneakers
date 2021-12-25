@@ -16,9 +16,8 @@ function mostrarImagem(id) {
         img_principal[i].className = img_principal[i].className.replace("d-block", "d-none");
         // muda o display de todas elas pra none
     }
-    var img_atual = document.getElementById("imagem-" + id);
-    // pega a imagem principal cujo id é o atual
-    img_atual.className = img_atual.className.replace("d-none", "d-block");
+    
+    img_principal[id-1].className = img_principal[id-1].className.replace("d-none", "d-block");
     // muda o display da imagem atual pra block
 
     var thumbnails = document.getElementsByClassName("thumb-principal")
@@ -97,3 +96,40 @@ function mostrarSlide(n) {
 var slideIndex = 1;
 // define um valor aleatório pro índice do slide, ao clicar em qualquer uma imagem do lightbox,
 // esse valor vai ser mudado pelo índice da imagem.
+
+
+$('.modal-lightbox').on('click', function(e) {
+    if(!$(e.target).hasClass('fechar-modal')){ // check if target is not the image displayed
+      fecharModal();
+      console.log("pies")
+    } 
+ });
+
+
+// FUNÇÕES DO DISPLAY DE IMAGENS MOBILE
+
+var slideIndexMobile = 1;
+
+function proximoSlideMobile(n) {
+    console.log("te")
+    mostrarSlideMobile(slideIndexMobile += n);
+}
+
+function mostrarSlideMobile(id) {
+    var i; // define i
+    var slides_mobile = document.getElementsByClassName("img-principal-mobile"); 
+    // recupera as imagens do display mobile
+    if (id > slides_mobile.length) { slideIndexMobile = 1 }
+    // se o botão > foi clicado no último slide, o índice passa a ser slides.length +1, esse if 
+    // faz com que ele volte a 1.
+    if (id < 1) { slideIndexMobile = slides_mobile.length }
+    // se o botão < foi clicado no primeiro slide, o índice passa a ser 0, esse if faz com que
+    // ele passe a ser slides.length.
+    for (i = 0; i < slides_mobile.length; i++) {
+        slides_mobile[i].className = slides_mobile[i].className.replace("d-block", "d-none");
+        // pega todas as imagens do display e muda de d-block para d-none
+    }
+
+    slides_mobile[slideIndexMobile - 1].className = slides_mobile[slideIndexMobile - 1].className.replace("d-none", "d-block");
+    // pega a imagem cujo index seja seja o atual e exibe ela
+}
