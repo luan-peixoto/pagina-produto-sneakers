@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
+/* remove a cor azul das anchor tag */
+
+a:hover {
+  color: inherit;
+}
 
 /* div com aviso pro vercel */
 .aviso {
@@ -77,17 +82,28 @@ html, body {
   color: hsl(223, 64%, 98%);
 }
 
-.nav-link:hover {
+.nav-link:active {
   color: hsl(219, 9%, 45%);
 }
 
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .nav-link:hover {
+    color: hsl(219, 9%, 45%);
+  }
+}
 
 /* o + significa que ao passar o hover o elemento (orange-horizontal-line) que estiver mais 
 proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
+
+/* não coloquei o hover só em non-touch-device nesse pq os links da navbar n tao funcionando 
+ai fica estranho */
 .nav-link:hover+.orange-horizontal-line {
   opacity: 100%;
   transition: all 0.5s ease;
 }
+
 
 .nav-link:active+.orange-horizontal-line {
   opacity: 100%;
@@ -177,9 +193,18 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   transition: 0.3s;
 }
 
-.thumb-hover-size:hover {
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .thumb-hover-size:hover {
+    filter: opacity(0.5);
+  }
+}
+
+.thumb-hover-size:active {
   filter: opacity(0.5);
 }
+
 
 /* muda a opacidade das thumbnails fora do modal ao passar o mouse */
 
@@ -189,7 +214,15 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
 
 }
 
-.thumb-hover-opacity:hover {
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .thumb-hover-opacity:hover {
+    filter: brightness(1);
+  }
+}
+
+.thumb-hover-opacity:active {
   filter: brightness(1);
 }
 
@@ -201,8 +234,16 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
 
 }
 
-.thumb-hover-opacity-modal:hover {
+.thumb-hover-opacity-modal:active {
   filter: brightness(1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .thumb-hover-opacity-modal:hover {
+    filter: brightness(1);
+  }
 }
 
 /* borda da thumbnail fora do modal ativa */
@@ -243,9 +284,20 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   font-size: 35px;
   font-weight: bold;
   transition: 0.3s;
+  text-decoration: none;
 }
 
-.close-button:hover {
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .close-button:hover {
+    color: hsl(26, 100%, 50%);
+    cursor: pointer;
+  }
+}
+
+.close-button:active {
   color: hsl(26, 100%, 50%);
   text-decoration: none;
   cursor: pointer;
@@ -318,28 +370,23 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
 }
 
 /* muda a cor da seta ao passar o mouse */
-.prev:hover,
-.next:hover {
-  color: hsl(26, 100%, 50%);
+
+@media (hover: hover) and (pointer: fine) {
+  /* precisa disso pro hover n bugar em device touch */
+  .prev:hover,
+  .next:hover {
+    color: hsl(26, 100%, 50%);
+  }
 }
 
 /* muda a cor ao clicar  */
 .prev:active,
 .next:active {
   filter: brightness(0.8);
+  color: hsl(26, 100%, 50%);
   box-shadow: none;
 }
 
-/* muda a cor da thumb do modal ao passar o mouse */
-
-.thumb-hover-color {
-  transition: 0.3s;
-
-}
-
-.thumb-hover-color:hover {
-  filter: brightness(0.8);
-}
 
 /* sombra no hover das imagens */
 
@@ -347,9 +394,19 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   transition: 0.3s;
 }
 
-.hover-shadow:hover {
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.hover-shadow:active {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
 
 /* botão add to cart */
 
@@ -372,9 +429,13 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   /* Standard */
 }
 
-.btn-add-cart:hover {
-  background-color: #cc6415;
-  color: hsl(223, 64%, 98%);
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .btn-add-cart:hover {
+    background-color: #cc6415;
+    color: hsl(223, 64%, 98%);
+  }
 }
 
 .btn-add-cart:active {
@@ -422,13 +483,18 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
   /* Standard */
 }
 
-.btn-qtd:hover {
-  filter: brightness(0.8);
-  color: hsl(26, 100%, 50%);
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .btn-qtd:hover {
+    filter: brightness(0.8);
+    color: hsl(26, 100%, 50%);
+  }
 }
 
 .btn-qtd:active {
   filter: brightness(0.5);
+  color: hsl(26, 100%, 50%);
 }
 
 
@@ -502,9 +568,14 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
 
 
 /* muda a cor da seta ao passar o mouse  */
-.prev-mobile:hover,
-.next-mobile:hover {
-  color: hsl(26, 100%, 50%);
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .prev-mobile:hover,
+  .next-mobile:hover {
+    color: hsl(26, 100%, 50%);
+  }
 }
 
 /* muda a cor ao clicar  */
@@ -512,4 +583,5 @@ proximo do nav-link hoverado recebera as mesmas configurações do nav-link. */
 .next-mobile:active {
   filter: brightness(0.8);
   box-shadow: none;
+  color: hsl(26, 100%, 50%);
 }
