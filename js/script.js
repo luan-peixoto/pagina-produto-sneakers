@@ -141,4 +141,3 @@ function mostrarSlideMobile(id) {
     // pega a imagem cujo index seja seja o atual e exibe ela
 }
 
-
