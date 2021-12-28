@@ -18,7 +18,14 @@
 </head>
 
 <body>
-  <div class="aviso" onclick="fecharAviso()">NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br></div>
+
+  
+
+  <div class="aviso" onclick="fecharAviso()">NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO
+    CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE
+    CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL
+    WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO
+    CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br>NON-COMMERCIAL WEBSITE CLICK TO CLOSE<br></div>
 
   <!--navbar principal, vai aparecer em ambos dispositivos-->
   <nav class="navbar navbar-light navbar-expand-sm sticky-top sticky-shadow pb-4 pb-sm-0 pt-3 pt-sm-2"
@@ -98,9 +105,50 @@
       <!-- seção carrinho e foto-->
       <div class="d-block pb-1 pb-sm-3">
         <!--carrinho-->
-        <a class="btn pe-1 p-0 p-sm-2" href="/index.html">
+        <a id="carrinho-btn" class="btn pe-1 p-0 p-sm-2" type="button" style="position: relative;">
           <img class="cart" src="images/icon-cart.svg" alt="avatar.png">
         </a>
+
+        <!--modal do carrinho-->
+        <div id="carrinho" class="cart-modal">
+          <div class="cart-modal-header">
+            <p class="p-0 m-0" style="font-size: 0.8em;"><b>Cart</b></p>
+          </div>
+      
+          <div class="cart-modal-body">
+      
+            <div class="cart-card pb-2">
+              <img class="cart-card-img pe-2 my-auto" src="images/image-product-1-thumbnail.jpg">
+              <div class="pe-2 my-auto">
+                <p class="m-0" style="font-size: 0.8em;">Fall Limited Edition Sneakers</p>
+                <p class="m-0" style="font-size: 0.8em;">$125.00 x 3 <b>$375.00</b></p>
+              </div>
+              <img class="cart-card-remove my-auto" src="images/icon-delete.svg">
+            </div>
+      
+            <div class="cart-card pb-2">
+              <img class="cart-card-img pe-2 my-auto" src="images/image-product-2-thumbnail.jpg">
+              <div class="pe-2 my-auto">
+                <p class="m-0" style="font-size: 0.8em;">Winter Limited Edition Sneakers</p>
+                <p class="m-0" style="font-size: 0.8em;">$100.00 x 3 <b>$300.00</b></p>
+              </div>
+              <img class="cart-card-remove my-auto" src="images/icon-delete.svg">
+            </div>
+      
+      
+          </div>
+      
+          <div class="cart-modal-footer">
+            <a class="btn-checkout w-100 btn d-inline pt-2 pb-2" type="button">
+              <p class="d-inline p-0 m-0" style="font-size: 0.8em;">Checkout</p>
+            </a>
+          </div>
+        </div>
+
+
+
+
+
 
         <!--avatar-->
         <a class="btn pt-1 p-0 p-sm-2" href="/index.html">
@@ -204,27 +252,27 @@
 
           <!--a classe img-principal-mobiile é só um jeito de localizar as imagens-->
           <div class="img-principal-mobile d-block">
-              <img draggable="false" class="w-100"
-                src="images/image-product-1.jpg" alt="tenis solto">
+            <img draggable="false" class="w-100" src="images/image-product-1.jpg" alt="tenis solto">
           </div>
 
           <div class="img-principal-mobile d-none">
-              <img draggable="false" class="w-100"
-                src="images/image-product-2.jpg" alt="tenis com graveto">
+            <img draggable="false" class="w-100" src="images/image-product-2.jpg" alt="tenis com graveto">
           </div>
 
           <div class="img-principal-mobile d-none">
-              <img draggable="false" class="w-100"
-                src="images/image-product-3.jpg" alt="tenis folha torta">
+            <img draggable="false" class="w-100" src="images/image-product-3.jpg" alt="tenis folha torta">
           </div>
 
           <div class="img-principal-mobile d-none">
-              <img draggable="false" class="w-100"
-                src="images/image-product-4.jpg" alt="tenis malabarista">
+            <img draggable="false" class="w-100" src="images/image-product-4.jpg" alt="tenis malabarista">
           </div>
 
-          <a class="fechar-modal prev-mobile ms-2" type="button" onclick="proximoSlideMobile(-1)"> <p>&#10094;</p></a>
-          <a class="fechar-modal next-mobile me-2" type="button" onclick="proximoSlideMobile(1)"> <p>&#10095;</p></a>
+          <a class="fechar-modal prev-mobile ms-2" type="button" onclick="proximoSlideMobile(-1)">
+            <p>&#10094;</p>
+          </a>
+          <a class="fechar-modal next-mobile me-2" type="button" onclick="proximoSlideMobile(1)">
+            <p>&#10095;</p>
+          </a>
 
         </div>
 
@@ -243,9 +291,10 @@
             <h3 class="d-inline pe-4"><b>$125.00</b></h3>
             <p class="d-inline ps-2 pe-2 pt-1 pb-1"
               style="font-size: 0.8em;color: hsl(26, 100%, 55%); background-color: hsl(25, 100%, 94%);"><b>50%</b></p>
-            
-              <!--preço antigo em md pra baixo fica do lado-->
-              <p class="d-inline pb-1 ps-2 d-md-none" style="font-size: 0.8em; color: hsl(220, 14%, 75%);"><b>$250.00</b></p>
+
+            <!--preço antigo em md pra baixo fica do lado-->
+            <p class="d-inline pb-1 ps-2 d-md-none" style="font-size: 0.8em; color: hsl(220, 14%, 75%);"><b>$250.00</b>
+            </p>
           </div>
 
           <!--preço antigo em md pra cima fica em baixo-->

@@ -379,6 +379,7 @@ ai fica estranho */
 /* muda a cor da seta ao passar o mouse */
 
 @media (hover: hover) and (pointer: fine) {
+
   /* precisa disso pro hover n bugar em device touch */
   .prev:hover,
   .next:hover {
@@ -484,7 +485,7 @@ color: inherit vai dar a mesma merda, só que preto pq é a cor padrão do body 
 .btn-qtd {
   transition: 0.3s ease;
   background-color: hsl(230, 18%, 93%);
-  color: hsl(26, 100%, 50%) !important; 
+  color: hsl(26, 100%, 50%) !important;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -599,4 +600,86 @@ color: inherit vai dar a mesma merda, só que preto pq é a cor padrão do body 
   filter: brightness(0.8);
   box-shadow: none;
   color: hsl(26, 100%, 50%);
+}
+
+
+@media (max-width: 576px) {
+
+/* carrinho */
+
+.cart-modal {
+  display: none;
+  z-index: 1055;
+  position: fixed;
+  top: 90px;
+  left: 5%;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid rgb(201, 201, 201);
+  background-color: white;
+}
+
+.cart-modal-header {
+  padding: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.cart-modal-body {
+  padding: 1rem;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.cart-modal-footer {
+  padding: 1rem;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+/* botão de checkout */
+
+.btn-checkout {
+  transition: 0.3s ease;
+  border-radius: 8px;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(223, 64%, 98%) !important;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* precisa disso pro hover n bugar em device touch */
+  .btn-checkout:hover {
+    background-color: #cc6415;
+    color: hsl(223, 64%, 98%);
+  }
+}
+
+.btn-checkout:active {
+  background-color: #ac5513;
+  color: hsl(223, 64%, 98%);
+}
+
+/* cartões dentro do modal do carrinho */
+.cart-card {
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.cart-card-img {
+  width: 60px; 
+  height: 55px;
+}
+
+.cart-card-remove {
+  margin-left: auto;
+  width: 12px; 
+  height: 15px;
+}
+
 }

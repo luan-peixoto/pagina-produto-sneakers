@@ -140,3 +140,5 @@ function mostrarSlideMobile(id) {
     slides_mobile[slideIndexMobile - 1].className = slides_mobile[slideIndexMobile - 1].className.replace("d-none", "d-block");
     // pega a imagem cujo index seja seja o atual e exibe ela
 }
+
+
