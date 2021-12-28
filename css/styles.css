@@ -275,6 +275,13 @@ ai fica estranho */
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* fazer o modal não aparecer no mobile, ele é substituido pelo display de imgs */
+@media (max-width: 576px) {
+  .modal-lightbox {
+    display: none !important;
+  }
+}
+
 /* botão de fechar o modal do lightbox */
 .close-button {
   color: white;
