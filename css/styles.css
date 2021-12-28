@@ -409,12 +409,16 @@ ai fica estranho */
 
 
 /* botão add to cart */
+/* o :hover pra color sempre sobrescreve, por causa do bug do hover ficar pra sempre
+em dispositivo touch, o html por padrão dá color: blue pra anchor tag, e como é impossivel
+colocar o padrão da linguagem dentro do @media (hover), vai ficar assim, e se colocar
+color: inherit vai dar a mesma merda, só que preto pq é a cor padrão do html */
 
 .btn-add-cart {
   transition: 0.3s ease;
   border-radius: 8px;
   background-color: hsl(26, 100%, 55%);
-  color: hsl(223, 64%, 98%);
+  color: hsl(223, 64%, 98%) !important;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -465,11 +469,15 @@ ai fica estranho */
 }
 
 /* botão de qtd */
-
+/* tem q usar important na cor pq o :hover tá sobrescrevendo ela 
+o :hover pra color sempre sobrescreve, por causa do bug do hover ficar pra sempre
+em dispositivo touch, o html por padrão dá color: blue pra anchor tag, e como é impossivel
+colocar o padrão da linguagem dentro do @media (hover), vai ficar assim, e se colocar
+color: inherit vai dar a mesma merda, só que preto pq é a cor padrão do body */
 .btn-qtd {
   transition: 0.3s ease;
   background-color: hsl(230, 18%, 93%);
-  color: hsl(26, 100%, 50%);
+  color: hsl(26, 100%, 50%) !important; 
   text-align: center;
   cursor: pointer;
   text-decoration: none;
