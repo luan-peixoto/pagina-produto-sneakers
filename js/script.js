@@ -44,11 +44,15 @@ function mostrarImagem(id) {
 // abrir o modal
 function abrirModal() {
     document.getElementById("modal-lightbox").style.display = "block";
+    document.body.style.overflow = "hidden";
+    // overflow hidden impede que o documento seja rolado quando o modal do lightbox tá aberto
 }
 
 // fechar o modal
 function fecharModal() {
     document.getElementById("modal-lightbox").style.display = "none";
+    document.body.style.overflow = "visible";
+    // overflow visible torna o documento rolavel quando o modal do lightbox for fechado
 }
 
 // Next/previous controls

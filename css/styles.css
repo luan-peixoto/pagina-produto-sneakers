@@ -263,6 +263,7 @@ ai fica estranho */
 
 
 /* The Modal (background) */
+/* overflow auto é necessário pros elementos do light-box serem roláveis */
 .modal-lightbox {
   display: none;
   position: fixed;
