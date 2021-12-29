@@ -14,6 +14,8 @@
         }
     });
 
+
+
 // ----------------------------
 
 // FUNÇÃO PARA MOSTRAR O DISPLAY DE IMAGENS FORA DO MOBILE FORA DO LIGHT-BOX
@@ -54,7 +56,8 @@
         lightbox.classList.add("fade-in");
 
         document.body.style.overflow = "hidden";
-        // overflow hidden impede que o documento seja rolado quando o modal do lightbox tá aberto
+        // overflow hidden impede que o documento seja rolado quando o modal do 
+        // lightbox tá aberto
     }
 
 // fUNÇÃO PARA FECHAR MODAL DO LIGHTBOX
@@ -67,7 +70,8 @@
             lightbox.style.display = "none";
             lightbox.classList.remove("fade-out");
             document.body.style.overflow = "visible";
-            // overflow visible torna o documento rolavel quando o modal do lightbox for fechado
+            // overflow visible torna o documento rolavel quando o modal do lightbox 
+            // for fechado
         }, 300)
         
     }
@@ -128,12 +132,15 @@
 
 // FUNÇÃO PARA FECHAR O LIGHT-BOX CLICANDO APENAS NA PARTE PRETA (LUGARES QUE N A CLASSE fechar-modal)
 
-    $('.modal-lightbox').on('click', function(e) {
-        if(!$(e.target).hasClass('fechar-modal')){ // check if target is not the image displayed
-        fecharModal();
-        console.log("pies")
-        } 
-    });
+    var backdrop = document.getElementsByClassName("modal-lightbox")[0];
+
+    backdrop.addEventListener('click',  function(event) {
+        // a classe manter-modal precisa adicionada a todos os elementos do light-box que 
+        // ao serem clicados não devem fechar o modal
+        if (!event.target.classList.contains("manter-modal")) {
+            fecharModal();
+        }
+    } );
 
 // ----------------------
 
