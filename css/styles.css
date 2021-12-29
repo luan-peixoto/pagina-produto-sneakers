@@ -311,7 +311,7 @@ ai fica estranho */
   cursor: pointer;
 }
 
-/* esconder todas as imagens dentro do modal por padrão */
+/* esconder todas as imagens de display do modal por padrão, para mostrar apenas uma */
 .modal-image {
   display: none;
 }
@@ -413,6 +413,40 @@ ai fica estranho */
 
 .hover-shadow:active {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* animação de fade-in e fade-out */
+
+.fade-out {
+  -webkit-animation: fade-out 0.3s linear forwards;
+  animation: fade-out 0.3s linear forwards;
+  opacity: 1;
+}
+
+@keyframes fade-out {
+  50% {
+      opacity: 0.5;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 0.3s linear forwards;
+  animation: fade-in 0.3s linear forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  50% {
+      opacity: 0.5;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
 
 
@@ -603,84 +637,85 @@ color: inherit vai dar a mesma merda, só que preto pq é a cor padrão do body 
   color: hsl(26, 100%, 50%);
 }
 
+/* carrinho modal */
 
 @media (max-width: 576px) {
 
-/* carrinho */
+  
 
-.cart-modal {
-  display: none;
-  z-index: 1055;
-  position: fixed;
-  top: 90px;
-  left: 5%;
-  width: 90%;
-  border-radius: 5px;
-  border: 1px solid rgb(201, 201, 201);
-  background-color: white;
-}
+  .cart-modal {
+    display: none;
+    z-index: 1055;
+    position: fixed;
+    top: 90px;
+    left: 5%;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid rgb(201, 201, 201);
+    background-color: white;
+  }
 
-.cart-modal-header {
-  padding: 1rem;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(235, 235, 235);
-}
+  .cart-modal-header {
+    padding: 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(235, 235, 235);
+  }
 
-.cart-modal-body {
-  padding: 1rem;
-  border-bottom: 1px solid rgb(235, 235, 235);
-}
+  .cart-modal-body {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(235, 235, 235);
+  }
 
-.cart-modal-footer {
-  padding: 1rem;
-  border-bottom: 1px solid rgb(235, 235, 235);
-}
+  .cart-modal-footer {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(235, 235, 235);
+  }
 
-/* botão de checkout */
+  /* botão de checkout */
 
-.btn-checkout {
-  transition: 0.3s ease;
-  border-radius: 8px;
-  background-color: hsl(26, 100%, 55%);
-  color: hsl(223, 64%, 98%) !important;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+  .btn-checkout {
+    transition: 0.3s ease;
+    border-radius: 8px;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(223, 64%, 98%) !important;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
-@media (hover: hover) and (pointer: fine) {
+  @media (hover: hover) and (pointer: fine) {
 
-  /* precisa disso pro hover n bugar em device touch */
-  .btn-checkout:hover {
-    background-color: #cc6415;
+    /* precisa disso pro hover n bugar em device touch */
+    .btn-checkout:hover {
+      background-color: #cc6415;
+      color: hsl(223, 64%, 98%);
+    }
+  }
+
+  .btn-checkout:active {
+    background-color: #ac5513;
     color: hsl(223, 64%, 98%);
   }
-}
 
-.btn-checkout:active {
-  background-color: #ac5513;
-  color: hsl(223, 64%, 98%);
-}
+  /* cartões dentro do modal do carrinho */
+  .cart-card {
+    padding-bottom: 16px;
+    display: flex;
+  }
 
-/* cartões dentro do modal do carrinho */
-.cart-card {
-  padding-bottom: 16px;
-  display: flex;
-}
+  .cart-card-img {
+    width: 60px;
+    height: 55px;
+  }
 
-.cart-card-img {
-  width: 60px; 
-  height: 55px;
-}
-
-.cart-card-remove {
-  margin-left: auto;
-  width: 12px; 
-  height: 15px;
-}
+  .cart-card-remove {
+    margin-left: auto;
+    width: 12px;
+    height: 15px;
+  }
 
 }
