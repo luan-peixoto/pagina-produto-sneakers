@@ -18,9 +18,8 @@
 </head>
 
 <body>
-
   <!--modal do carrinho para mobile apenas-->
-  <div class="cart-modal d-sm-none">
+  <div class="cart-modal d-sm-none" style="display: none;">
     <div class="cart-modal-header">
       <p class="p-0 m-0" style="font-size: 0.8em;"><b>Cart</b></p>
     </div>
@@ -142,7 +141,7 @@
       <!-- seção carrinho e foto-->
       <div class="d-block pb-1 pb-sm-3">
         <!--carrinho-->
-        <a class="btn pe-1 p-0 p-sm-2" type="button" onclick="" style="position: relative;">
+        <a id="abrir-carrinho" class="btn pe-1 p-0 p-sm-2" type="button" onclick="toggleCarrinho()" style="position: relative;">
           <img class="cart" src="images/icon-cart.svg" alt="avatar.png">
         </a>
 
@@ -346,7 +345,7 @@
     fechado, mas se clicar em algum espaço vazio (preto), ele fecha-->
 
     <!--botão de fechar o modal-->
-    <a type="button" onclick="fecharModal()">
+    <a class="manter-modal" type="button" onclick="fecharModal()">
       <span class="manter-modal close-button">&times;</span>
     </a>
     <div class="container">

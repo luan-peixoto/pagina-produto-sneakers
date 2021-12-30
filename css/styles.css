@@ -35,7 +35,7 @@ html, body {
 
 /* fazer a navbar vir da esquerda em dispositivos xsmall (mobile) */
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .navbar-collapse {
     position: absolute;
     top: 0px;
@@ -155,7 +155,12 @@ ai fica estranho */
 }
 
 .cart {
+  transition: 0.3s;
   width: 20px;
+}
+
+.cart-open-btn {
+  filter: brightness(0.3);
 }
 
 
@@ -277,7 +282,7 @@ ai fica estranho */
 }
 
 /* fazer o modal não aparecer no mobile, ele é substituido pelo display de imgs */
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .modal-lightbox {
     display: none !important;
   }
@@ -639,7 +644,7 @@ color: inherit vai dar a mesma merda, só que preto pq é a cor padrão do body 
 
 /* carrinho modal */
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
 
   
 
